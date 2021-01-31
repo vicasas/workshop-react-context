@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 // contants
 const ADD_TO_CART = 'ADD_TO_CART'
 const REMOVE_ONE_CART = 'REMOVE_ONE_CART'
-// const REMOVE_ALL_CART = 'REMOVE_ALL_CART'
+const REMOVE_ALL_CART = 'REMOVE_ALL_CART'
 
 // initial state
 const initialState = {}
@@ -53,6 +53,13 @@ function cartReducer(state, action) {
           quantity,
         },
       }
+    }
+
+    case REMOVE_ALL_CART: {
+      const newItems = { ...state }
+      delete newItems[payload.id]
+
+      return newItems
     }
 
     default:
@@ -112,7 +119,10 @@ export const useCartDispatch = () => {
   const removeOneFromCart = item =>
     dispatch({ type: REMOVE_ONE_CART, payload: item })
 
-  return { addToCart, removeOneFromCart }
+  const removeAllFromCart = item =>
+    dispatch({ type: REMOVE_ALL_CART, payload: item })
+
+  return { addToCart, removeOneFromCart, removeAllFromCart }
 }
 
 export default CartProvider

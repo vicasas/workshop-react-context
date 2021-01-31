@@ -1,0 +1,30 @@
+.cart {
+  padding: 8px;
+  margin-bottom: 1rem;
+}
+
+.cartEmpty {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.cart > ul {
+  padding: 0;
+}
+
+.cartListItem {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.cartProduct > span {
+  margin-right: 1rem;
+}
+
+.cartButtons {
+  margin-left: 1rem;
+}
+
+.cartButtons > button {
+  margin-left: 0.5rem;
+}

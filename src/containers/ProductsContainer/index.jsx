@@ -1,4 +1,4 @@
-import Products from 'components/products'
+import Products from 'components/Products'
 import React, { useEffect, useState } from 'react'
 import getProducts from 'services/products'
 

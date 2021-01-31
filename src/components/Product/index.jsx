@@ -8,7 +8,7 @@ const Product = ({ product, onClick }) => {
     <div className={styles.product}>
       <div>
         <div>{title}</div>
-        <div>{price}</div>
+        <div>${price}</div>
       </div>
       <div>
         <button type='button' onClick={() => onClick(product)}>

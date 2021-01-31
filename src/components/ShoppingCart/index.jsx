@@ -24,7 +24,7 @@ const ShoppingCart = ({
             <li key={id} className={styles.cartListItem}>
               <div className={styles.cartProduct}>
                 <span>{title}</span>
-                <span>{price}</span>
+                <span>${price}</span>
                 <span>{qty}</span>
               </div>
               <div className={styles.cartButtons}>
@@ -46,7 +46,7 @@ const ShoppingCart = ({
           )
         })}
       </ul>
-      <div>Sub Total: {subTotal}</div>
+      <div>Sub Total: ${subTotal}</div>
     </div>
   )
 }

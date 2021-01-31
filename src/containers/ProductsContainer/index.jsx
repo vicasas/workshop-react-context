@@ -2,13 +2,17 @@ import { useEffect, useState } from 'react'
 import Products from 'components/Products'
 import ShoppingCart from 'components/ShoppingCart'
 import getProducts from 'services/products'
+import { useCartState, useCartDispatch } from 'contexts/CartContext'
 
 const ProductContainer = () => {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  const handleAddToCart = product => product // TODO
+  const { items } = useCartState()
+  const { addToCart } = useCartDispatch()
+
+  const handleAddToCart = product => addToCart(product)
 
   useEffect(() => {
     setLoading(true)
@@ -27,9 +31,9 @@ const ProductContainer = () => {
     <>
       <ShoppingCart
         quantity={0}
-        items={[]}
+        items={items}
         subTotal={0}
-        onAddToCart={() => null}
+        onAddToCart={addToCart}
         onRemoveAll={() => null}
         onRemoveOne={() => null}
       />

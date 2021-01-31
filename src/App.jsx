@@ -1,5 +1,5 @@
-function App() {
-  return <h1>React Context</h1>
-}
+import ProductContainer from 'containers/ProductsContainer'
+
+const App = () => <ProductContainer />
 
 export default App

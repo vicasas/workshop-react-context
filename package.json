@@ -1,0 +1,79 @@
+{
+  "name": "react-context",
+  "version": "0.1.0",
+  "description": "How to use React Context effectively. Creating a shopping cart.",
+  "private": true,
+  "author": "Victor Casas",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "flux",
+    "hooks",
+    "context",
+    "usecontext",
+    "usereducer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vicasas/react-context"
+  },
+  "bugs": {
+    "url": "https://github.com/vicasas/react-context/issues"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/user-event": "^12.6.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint --fix \"**/*.+(js|jsx|ts|tsx)\"",
+    "pretty": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|css|md)\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./**/*.{js,jsx,ts,tsx}": [
+      "npm run lint",
+      "npm run pretty"
+    ],
+    "./**/*.{json,css,md,yml,yaml}": [
+      "npm run pretty"
+    ]
+  }
+}

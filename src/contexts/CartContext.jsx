@@ -80,6 +80,12 @@ CartProvider.propTypes = {
 
 const getCartCount = (sum, item) => sum + item.quantity
 
+const getCartSubTotal = (sum, item) => {
+  let subTotal = sum
+  subTotal += item.price * item.quantity
+  return subTotal
+}
+
 // custom hook state
 export const useCartState = () => {
   const state = useContext(CartStateContext)
@@ -89,8 +95,9 @@ export const useCartState = () => {
 
   const items = Object.values(state)
   const count = items.reduce(getCartCount, 0)
+  const subTotal = items.reduce(getCartSubTotal, 0)
 
-  return { items, count, subTotal: 0 }
+  return { items, count, subTotal }
 }
 
 // custom hook dispatch

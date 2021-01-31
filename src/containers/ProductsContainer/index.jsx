@@ -1,5 +1,5 @@
+import { useEffect, useState } from 'react'
 import Products from 'components/Products'
-import React, { useEffect, useState } from 'react'
 import getProducts from 'services/products'
 
 const ProductContainer = () => {

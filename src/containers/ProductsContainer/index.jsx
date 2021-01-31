@@ -25,7 +25,14 @@ const ProductContainer = () => {
 
   return (
     <>
-      <ShoppingCart />
+      <ShoppingCart
+        quantity={0}
+        items={[]}
+        subTotal={0}
+        onAddToCart={() => null}
+        onRemoveAll={() => null}
+        onRemoveOne={() => null}
+      />
       <Products products={products} onClick={handleAddToCart} />
     </>
   )

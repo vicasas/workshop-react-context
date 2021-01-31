@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 // contants
 const ADD_TO_CART = 'ADD_TO_CART'
-// const REMOVE_ONE_CART = 'REMOVE_ONE_CART'
+const REMOVE_ONE_CART = 'REMOVE_ONE_CART'
 // const REMOVE_ALL_CART = 'REMOVE_ALL_CART'
 
 // initial state
@@ -39,6 +39,18 @@ function cartReducer(state, action) {
         [payload.id]: {
           ...payload,
           quantity: 1,
+        },
+      }
+    }
+
+    case REMOVE_ONE_CART: {
+      const quantity = existingCartItem.quantity - 1
+
+      return {
+        ...state,
+        [payload.id]: {
+          ...existingCartItem,
+          quantity,
         },
       }
     }
@@ -87,7 +99,10 @@ export const useCartDispatch = () => {
 
   const addToCart = product => dispatch({ type: ADD_TO_CART, payload: product })
 
-  return { addToCart }
+  const removeOneFromCart = item =>
+    dispatch({ type: REMOVE_ONE_CART, payload: item })
+
+  return { addToCart, removeOneFromCart }
 }
 
 export default CartProvider

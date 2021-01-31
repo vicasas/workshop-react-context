@@ -10,7 +10,7 @@ const ProductContainer = () => {
   const [error, setError] = useState(null)
 
   const { items } = useCartState()
-  const { addToCart } = useCartDispatch()
+  const { addToCart, removeOneFromCart } = useCartDispatch()
 
   const handleAddToCart = product => addToCart(product)
 
@@ -35,7 +35,7 @@ const ProductContainer = () => {
         subTotal={0}
         onAddToCart={addToCart}
         onRemoveAll={() => null}
-        onRemoveOne={() => null}
+        onRemoveOne={removeOneFromCart}
       />
       <Products products={products} onClick={handleAddToCart} />
     </>

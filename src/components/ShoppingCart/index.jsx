@@ -28,7 +28,11 @@ const ShoppingCart = ({
                 <span>{qty}</span>
               </div>
               <div className={styles.cartButtons}>
-                <button type='button' onClick={() => onRemoveOne(item)}>
+                <button
+                  type='button'
+                  onClick={() => onRemoveOne(item)}
+                  disabled={qty === 1}
+                >
                   -
                 </button>
                 <button type='button' onClick={() => onAddToCart(item)}>

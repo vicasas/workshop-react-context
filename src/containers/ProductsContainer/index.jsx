@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Products from 'components/Products'
+import ShoppingCart from 'components/ShoppingCart'
 import getProducts from 'services/products'
 
 const ProductContainer = () => {
@@ -24,6 +25,7 @@ const ProductContainer = () => {
 
   return (
     <>
+      <ShoppingCart />
       <Products products={products} onClick={handleAddToCart} />
     </>
   )

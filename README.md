@@ -13,8 +13,8 @@ How to use React Context effectively. Creating a shopping cart. 🎣
 Clone the repository and switch to the `started` branch which contains the minimum assets to get started.
 
 ```bash
-git clone https://github.com/vicasas/react-context.git
-cd react-context
+git clone https://github.com/vicasas/workshop-react-context.git
+cd workshop-react-context
 npm install
 git checkout -b started origin/started
 npm start

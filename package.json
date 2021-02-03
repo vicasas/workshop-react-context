@@ -1,5 +1,5 @@
 {
-  "name": "react-context",
+  "name": "workshop-react-context",
   "version": "0.1.0",
   "description": "How to use React Context effectively. Creating a shopping cart.",
   "private": true,
@@ -15,10 +15,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/vicasas/react-context"
+    "url": "https://github.com/vicasas/workshop-react-context"
   },
   "bugs": {
-    "url": "https://github.com/vicasas/react-context/issues"
+    "url": "https://github.com/vicasas/workshop-react-context/issues"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",

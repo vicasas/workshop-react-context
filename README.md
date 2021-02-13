@@ -16,7 +16,7 @@ Clone the repository and switch to the `started` branch which contains the minim
 git clone https://github.com/vicasas/react-context.git
 cd react-context
 npm install
-git checkout -b started origin/started
+git checkout -b first-part origin/first-part
 npm start
 ```
 

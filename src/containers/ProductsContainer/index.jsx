@@ -14,6 +14,9 @@ const ProductContainer = () => {
 
   const handleAddToCart = product => addToCart(product)
 
+  // eslint-disable-next-line no-console
+  console.log('items:', items)
+
   useEffect(() => {
     setLoading(true)
 
@@ -31,9 +34,9 @@ const ProductContainer = () => {
     <>
       <ShoppingCart
         quantity={0}
-        items={items}
+        items={[]}
         subTotal={0}
-        onAddToCart={addToCart}
+        onAddToCart={() => null}
         onRemoveAll={() => null}
         onRemoveOne={() => null}
       />
